@@ -17,7 +17,7 @@ EOF
 
 ulimit -n 51200
 
-cat > /tmp/sysctl.conf << EOF
+cat >> /etc/sysctl.conf << EOF
 fs.file-max = 51200
 
 net.core.rmem_max = 67108864
@@ -41,4 +41,4 @@ net.ipv4.tcp_mtu_probing = 1
 net.ipv4.tcp_congestion_control = hybla
 EOF
 
-sysctl -p /tmp/sysctl.conf
+sysctl -p
